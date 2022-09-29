@@ -18,23 +18,8 @@ export class LoginComponent implements OnInit {
     password : new FormControl(null,Validators.required)
   })
 
-  // username : string = "";
-  // password : string = ""
-
-  // onKeyUpUsername(){
-  //   console.log(this.username);
-  // }
-
-  // onKeyUpPassword(){
-  //   console.log(this.password);
-  // }
-
-  // getUsername(){
-  //   return this.username;
-  // }
-
-  // getPassword(){
-  //   return this.password;
-  // }
+  login(){
+    alert("loged in");
+  }
 
 }
