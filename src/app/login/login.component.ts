@@ -1,5 +1,9 @@
+import { TokenService } from './../services/token.service';
+import { AuthService } from './../services/auth.service';
 import { Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { __values } from 'tslib';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,18 +12,28 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
   styleUrls : ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  constructor() { }
+
+  constructor(private authService : AuthService, private tokenService:TokenService,private router : Router) { }
 
   ngOnInit(): void {
+    console.log(this.loginForm.value);
   }
 
   loginForm = new FormGroup({
-    username : new FormControl(null,Validators.required),
-    password : new FormControl(null,Validators.required)
+    login : new FormControl( "",Validators.required),
+    password : new FormControl("",Validators.required)
   })
 
+
+
   login(){
-    alert("loged in");
+    this.authService.login(this.loginForm.getRawValue()).subscribe(res => this.handleResponse(res))
+  }
+
+  handleResponse(res: any){
+    this.tokenService.handle(res)
+    this.router.navigateByUrl("/orangeb2b")
+
   }
 
 }
