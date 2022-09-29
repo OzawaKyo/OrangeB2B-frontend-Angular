@@ -1,0 +1,16 @@
+.titre {
+    width: 100%;
+    padding: 50px;
+    background-color: black;
+    color: #ff6600;
+}
+
+.btn-color {
+    background-color: black;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #ff6600;
+    color: white;
+}
