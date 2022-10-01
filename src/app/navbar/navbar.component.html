@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg  ">
+    <button type="button" class="btn btn-outline-primary dropbtn " id="dropdownBasic1" routerLink="/orangeb2b">CatalogueB2B</button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <button type="button" class="btn btn-outline-primary dropbtn" id="dropdownBasic1" routerLink="/orangeb2b">Home</button>
+            <div class="dropdown">
+                <button type="button" class="btn btn-outline-primary dropbtn" id="dropdownBasic1" ngbDropdownToggle>Categorie</button>
+                <div class="dropdown-content" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <a routerLink="/orangeb2b/voip" ngbDropdownItem>Voip</a>
+                    <a ngbDropdownItem>Data</a>
+                    <a ngbDropdownItem>Wifi</a>
+                    <a ngbDropdownItem>Switch</a>
+                </div>
+            </div>
+        </ul>
+        <div *ngIf="currentUser">
+            <button type="button" class="btn btn-outline-primary dropbtn " id="dropdownBasic1" (click)="logout()">Logout</button>
+        </div>
+    </div>
+</nav>

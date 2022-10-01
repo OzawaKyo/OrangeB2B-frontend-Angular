@@ -4,6 +4,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { __values } from 'tslib';
 import { Router } from '@angular/router';
+import { AccountService } from '../services/account.service';
 
 
 @Component({
@@ -13,10 +14,13 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authService : AuthService, private tokenService:TokenService,private router : Router) { }
+  constructor(private authService : AuthService,
+              private tokenService:TokenService,
+              private router : Router,
+              private accountService: AccountService) { }
 
   ngOnInit(): void {
-    console.log(this.loginForm.value);
+
   }
 
   loginForm = new FormGroup({
@@ -24,15 +28,18 @@ export class LoginComponent implements OnInit {
     password : new FormControl("",Validators.required)
   })
 
-
-
   login(){
     this.authService.login(this.loginForm.getRawValue()).subscribe(res => this.handleResponse(res))
   }
 
   handleResponse(res: any){
     this.tokenService.handle(res)
+    this.accountService.changeAuthStatus(true);
     this.router.navigateByUrl("/orangeb2b")
+    console.log(res);
+    console.log(this.loginForm.value);
+
+
 
   }
 

@@ -42,6 +42,8 @@ export class TokenService {
     if (jwt) {
 
       const payload = this.payload(jwt);
+
+      return true;
     }
     return false;
   }
