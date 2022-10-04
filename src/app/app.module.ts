@@ -14,6 +14,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { JwtInterceptor } from './services/jwt.interceptor';
 import { ConsulterComponent } from './consulter/consulter.component';
 import { CreateComponent } from './create/create.component';
+import { DataComponent } from './data/data.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { CreateComponent } from './create/create.component';
     VoipComponent,
     PageNotFoundComponent,
     ConsulterComponent,
-    CreateComponent
+    CreateComponent,
+    DataComponent
   ],
   imports: [
     BrowserModule,

@@ -1,76 +1,40 @@
-.alignn {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    position: relative;
-    left: 70px;
-    top: 70px;
-    width: 300px;
-    padding: 10px;
+.title {
+    margin-top: 1em;
+    margin-left: 4em;
 }
 
-.btn2 {
-    background-color: black;
+.voip {
+    margin: 0%;
+    padding: 0%;
+}
+
+.action {
+    margin-top: 5em;
+    margin-bottom: 2em;
+}
+
+.btn {
+    border: #ff6600 1px solid;
+    color: #ff6600;
+    font-weight: bold;
+    font-size: large;
+    padding: 0.5em;
+}
+
+.btn:hover {
+    border: #ff6600 1px solid;
     color: white;
-    position: relative;
-    left: 80px;
-    top: 80px;
-    width: 300px;
-    padding: 10px;
-    font-size: 17px;
-    cursor: pointer;
-}
-
-.btn2:hover {
     background-color: #ff6600;
-    transition: 0.2s;
-}
-
-.align2 {
-    position: relative;
-    left: 70%;
-    top: 35px;
-    width: 300px;
-    padding: 5px;
-    margin: 8px;
-    font-size: 17px;
-}
-
-.btn3 {
-    background-color: black;
-    color: white;
-    cursor: pointer;
-}
-
-.btn3:hover {
-    background-color: #ff6600;
-    color: white;
-    transition: 0.2s;
-}
-
-table {
-    width: 90%;
 }
 
 th {
-    color: white;
-    background-color: black;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-th,
-td {
-    padding: 16px;
-}
-
-.btn4 {
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    width: 100%;
-}
-
-.btn4:hover {
     background-color: #ff6600;
     color: white;
-    transition: 0s;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+}
+
+td {
+    font-weight: bold;
 }

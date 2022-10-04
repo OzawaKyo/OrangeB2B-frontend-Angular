@@ -10,7 +10,7 @@ import { TokenService } from '../services/token.service';
 })
 export class NavbarComponent implements OnInit {
 
-
+  public loggedIn: boolean = false;
   currentUser: null | undefined;
 
   constructor(private accountService: AccountService,
@@ -20,6 +20,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
 
     this.accountService.authStatus.subscribe(res=> {
+      this.loggedIn = res;
       this.currentUser = this.tokenService.getInfos();
     })
   }

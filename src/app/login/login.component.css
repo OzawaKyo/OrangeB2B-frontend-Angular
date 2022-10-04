@@ -1,8 +1,17 @@
+.background {
+    background-image: url("../../assets/OrangeG.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: cover;
+    height: 100%;
+    margin-top: 4.65em;
+}
+
 .titre {
     width: 100%;
-    padding: 50px;
-    background-color: black;
+    padding: 25px;
     color: #ff6600;
+    margin-bottom: 1em;
 }
 
 .btn-color {
@@ -13,4 +22,8 @@
 .btn:hover {
     background-color: #ff6600;
     color: white;
+}
+
+.btn:disabled {
+    background-color: #f8a770;
 }

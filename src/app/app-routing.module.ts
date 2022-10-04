@@ -8,6 +8,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CreateComponent } from './create/create.component';
 import { ConsulterComponent } from './consulter/consulter.component';
+import { DataComponent } from './data/data.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"/orangeb2b",pathMatch:"full"},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path : "orangeb2b",canActivate:[AuthGuard],children:[
     {path : "",component:HomepageComponent},
     {path : "voip",component:VoipComponent},
+    {path : "data",component:DataComponent},
     {path:"create",component:CreateComponent},
     { path: 'consulter/:Id', component: ConsulterComponent }
   ]},

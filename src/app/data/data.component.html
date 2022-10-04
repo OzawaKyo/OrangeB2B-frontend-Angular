@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+<div class="row">
+    <div class="col-md-4 col-sm-6">
+        <h1 class="alignn"> Les options DATA :</h1>
+
+        <button class="btn2" routerLink="/orangeb2b/create">Ajouter une option</button>
+    </div>
+    <div class="col-md-4 col-sm-0">
+
+    </div>
+
+    <div class="col-md-4 align-self-end ">
+        <br><br><br><br><br><br><br>
+        <div class="input-group">
+            <input type="search" class="form-control rounded col-md-5" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            <button type="button" class="btn btn-outline-primary btn3">search</button>
+        </div>
+    </div>
+
+
+</div>
+
+<br><br><br>
+
+<div class="row">
+
+    <table align="center" class="table">
+        <thead>
+            <tr>
+                <th style="border-top-left-radius: 10px; " scope="col ">Option</th>
+                <th scope="col ">Service</th>
+                <th scope="col ">Equipement</th>
+                <th scope="col ">Stock</th>
+                <th style="border-top-right-radius: 10px; " scope="col "></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let options of catalogue[0].offre; index as i ">
+                <ng-container *ngFor="let services of options.service ">
+                    <ng-container *ngFor="let equipements of services.equipement ">
+                        <td>{{ options.offreName}}</td>
+                        <td>{{ services.typeService }}</td>
+                        <td>{{ equipements.typeEquipement}}</td>
+                        <td>{{ options.id}}</td>
+                        <td> <button (click)="getId(options.id) " class=" btn btn4 ">Consulter</button></td>
+                    </ng-container>
+                </ng-container>
+            </tr>
+        </tbody>
+    </table>
+</div>

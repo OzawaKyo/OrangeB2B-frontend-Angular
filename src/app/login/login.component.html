@@ -1,33 +1,32 @@
 <!-- <input [(ngModel)]="username" type="text" (keyup.enter)="onKeyUp()"> -->
+<app-navbar></app-navbar>
+<div class="background">
+    <div align="center">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                        <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                            <div class="card-body p-5 text-center">
+                                <h1 class="titre"> Extranet Entreprises Orange</h1>
+                                <h3 class="mb-5">Sign in</h3>
 
-<div align="center">
-    <h1 class="titre" align="center"> Extranet Entreprises Orange</h1>
-    <form [formGroup]="loginForm" (ngSubmit)="login()">
-        <div class="container py-5 h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                    <div class="card shadow-2-strong" style="border-radius: 1rem;">
-                        <div class="card-body p-5 text-center">
+                                <div class="form-outline mb-4">
+                                    <input formControlName="login" type="username" class="form-control form-control-lg" />
+                                    <label class="form-label">Username</label>
+                                </div>
 
-                            <h3 class="mb-5">Sign in</h3>
-
-                            <div class="form-outline mb-4">
-                                <input formControlName="login" type="username" class="form-control form-control-lg" />
-                                <label class="form-label">Username</label>
+                                <div class="form-outline mb-4">
+                                    <input formControlName="password" type="password" id="typePasswordX-2" class="form-control form-control-lg" />
+                                    <label class="form-label" for="typePasswordX-2">Password</label>
+                                </div>
+                                <button [disabled]="loginForm.invalid" class="btn btn-lg
+                  btn-block btn-color " type="submit">Login</button>
                             </div>
-
-                            <div class="form-outline mb-4">
-                                <input formControlName="password" type="password" id="typePasswordX-2" class="form-control form-control-lg" />
-                                <label class="form-label" for="typePasswordX-2">Password</label>
-                            </div>
-
-                            <!-- Checkbox -->
-                            <button [disabled]="loginForm.invalid" class="btn btn-lg btn-block btn-color " type="submit">Login</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
-{{loginForm.value | json}}

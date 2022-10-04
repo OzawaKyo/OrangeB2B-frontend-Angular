@@ -1,66 +1,26 @@
-.navbar {
-    background-color: black;
+.nav-item {
+    padding: 0.5em;
+    font-size: large;
+    font-weight: bold;
 }
 
-.navbar button {
-    color: white;
-    text-align: center;
-    padding: 35px 35px;
-    text-decoration: none;
-    font-size: 25px;
-    background-color: inherit;
-    border: none;
-    outline: none;
+.nav-link {
+    color: #ff6600 !important;
 }
 
-.navbar button:hover {
+.nav-item :hover {
+    /* color: #ff6600; */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.brand {
+    color: #ff6600 !important;
+}
+
+.dropdown-item:active {
     background-color: #ff6600;
-}
-
-.dropbtn {
-    background-color: black;
-    color: white;
-    padding: 35px;
-    font-size: 25px;
-    border: none;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-    background-color: #ff6600;
-    color: white;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #ff6600;
-}
-
-button {
-    border: none;
 }
