@@ -46,7 +46,7 @@ product list .prod-cat li a {
 .prod-cat li a:focus,
 .prod-cat li a.active {
     background: none;
-    color: #ff7261;
+    color: #ff6600;
 }
 
 .pro-lab {
@@ -74,7 +74,7 @@ product list .prod-cat li a {
 }
 
 .adtocart {
-    background: #fc5959;
+    background: #ff6600;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -102,7 +102,7 @@ product list .prod-cat li a {
 }
 
 .product-list .price {
-    color: #fc5959;
+    color: #ff6600;
     font-size: 15px;
 }
 
@@ -133,7 +133,7 @@ product list .prod-cat li a {
 
 .product_meta a,
 .pro-price {
-    color: #fc5959;
+    color: #ff6600;
 }
 
 .pro-price,
@@ -165,4 +165,14 @@ product list .prod-cat li a {
 .pro-d-head {
     font-size: 18px;
     font-weight: 300;
+}
+
+.bb {
+    color: white;
+    background-color: black;
+}
+
+.bb:hover {
+    color: white;
+    background-color: #ff6600;
 }

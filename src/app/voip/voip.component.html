@@ -1,14 +1,28 @@
 <app-navbar></app-navbar>
-<div>
-    <h1 class="alignn"> Les offres VOIP :</h1>
-    <button class="btn2" routerLink="/orangeb2b/create">Ajouter une offre</button>
+<div class="row">
+    <div class="col-md-4 col-sm-6">
+        <h1 class="alignn"> Les offres VOIP :</h1>
+
+        <button class="btn2" routerLink="/orangeb2b/create">Ajouter une offre</button>
+    </div>
+    <div class="col-md-4 col-sm-0">
+
+    </div>
+
+    <div class="col-md-4 align-self-end ">
+        <br><br><br><br><br><br><br>
+        <div class="input-group">
+            <input type="search" class="form-control rounded col-md-5" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            <button type="button" class="btn btn-outline-primary btn3">search</button>
+        </div>
+    </div>
+
+
 </div>
+
 <br><br><br>
 
-<input class="align2" type="text" placeholder="Search..">
-<button class="btn3">Search</button>
-<br><br><br>
-<div>
+<div class="row">
 
     <table align="center" class="table">
         <thead>
@@ -28,7 +42,7 @@
                         <td>{{ services.typeService }}</td>
                         <td>{{ equipements.typeEquipement}}</td>
                         <td>{{ offres.id}}</td>
-                        <td> <button (click)="getId(offres.id) " class=" btn ">Consulter</button></td>
+                        <td> <button (click)="getId(offres.id) " class=" btn btn4 ">Consulter</button></td>
                     </ng-container>
                 </ng-container>
             </tr>

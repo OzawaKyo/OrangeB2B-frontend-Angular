@@ -37,17 +37,12 @@
 .btn3 {
     background-color: black;
     color: white;
-    position: relative;
-    top: 35px;
-    left: 70%;
-    width: 5%;
-    padding: 5px;
-    font-size: 15px;
     cursor: pointer;
 }
 
 .btn3:hover {
     background-color: #ff6600;
+    color: white;
     transition: 0.2s;
 }
 
@@ -67,14 +62,14 @@ td {
     padding: 16px;
 }
 
-.btn {
+.btn4 {
     background-color: black;
     color: white;
     cursor: pointer;
     width: 100%;
 }
 
-.btn:hover {
+.btn4:hover {
     background-color: #ff6600;
     color: white;
     transition: 0s;
