@@ -1,0 +1,74 @@
+<app-navbar></app-navbar>
+<br><br><br>
+
+
+<div class="container col-md-8 ">
+
+    <h1>Ajouter une offre :</h1>
+    <form align="center">
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <br>
+                <h4>Categorie :</h4>
+            </div>
+            <div class="form-group col-md-2">
+                <br>
+                <select [(ngModel)]="catalogues.categorie" name="categorie" id="inputState" class="form-control">
+              <option selected>VOIP</option>
+              <option>Wifi</option>
+              <option>DATA</option>
+              <option>SWITCH</option>
+          </select>
+            </div>
+        </div>
+
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <br>
+                <input [(ngModel)]="catalogues.offre[0].offreName" name="offreName" type="text" class="form-control" placeholder="Nom de l'offre">
+            </div>
+            <div class="form-group col-md-4">
+                <br>
+                <input [(ngModel)]="catalogues.offre[0].service[0].typeService" name="typeService" type="text" class="form-control" placeholder="Type de service">
+            </div>
+            <div class="form-group col-md-4">
+                <br>
+                <input [(ngModel)]="catalogues.offre[0].service[0].equipement[0].typeEquipement" name="typeEquipement" type="text" class="form-control" placeholder="Type d'equipement">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <br>
+            <input type="text" class="form-control" placeholder="Description">
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <br>
+                <input [(ngModel)]="catalogues.offre[0].service[0].equipement[0].caracteristique[0].marque" name="marque" type="text" class="form-control" placeholder="Marque">
+            </div>
+            <div class="form-group col-md-4">
+                <br>
+                <input [(ngModel)]="catalogues.offre[0].service[0].equipement[0].caracteristique[0].nbrPort" name="nbrPort" type="text" class="form-control" placeholder="Nombre de port">
+            </div>
+            <div class="form-group col-md-4">
+                <br>
+                <input [(ngModel)]="catalogues.offre[0].service[0].equipement[0].caracteristique[0].aplSim" name="aplSim" type="text" class="form-control" placeholder="Appels simultanés">
+            </div>
+            <div class="form-group col-md-6">
+                <br>
+                <input [(ngModel)]="catalogues.offre[0].service[0].equipement[0].caracteristique[0].acces" name="acces" type="text" class="form-control" placeholder="Accès">
+            </div>
+            <div class="form-group col-md-6">
+                <br>
+                <input [(ngModel)]="catalogues.offre[0].service[0].equipement[0].caracteristique[0].prix" name="prix" type="text" class="form-control" placeholder="Prix">
+            </div>
+        </div>
+        <br>
+        <div>
+            <button (click)="create()" class="btn col-md-3">Ajouter</button>
+        </div>
+    </form>
+</div>
+<p>{{catalogues | json}}</p>

@@ -13,4 +13,10 @@ export class OffreService {
    return this.http.get(`${environment.apiUrl}/OrangeB2B/api/catalogue/voip/get`)
   }
 
+  createC(catalogue:any){
+    return this.http.post(`${environment.apiUrl}/OrangeB2B/api/catalogue/create`,catalogue);
+  }
+  getVoip(id:any){
+    return this.http.get(`${environment.apiUrl}/OrangeB2B/api/catalogue/get/${id}`)
+   }
 }

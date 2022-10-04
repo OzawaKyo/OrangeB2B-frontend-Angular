@@ -11,6 +11,9 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { VoipComponent } from './voip/voip.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { JwtInterceptor } from './services/jwt.interceptor';
+import { ConsulterComponent } from './consulter/consulter.component';
+import { CreateComponent } from './create/create.component';
 
 
 @NgModule({
@@ -20,7 +23,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HomepageComponent,
     NavbarComponent,
     VoipComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ConsulterComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: JwtInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

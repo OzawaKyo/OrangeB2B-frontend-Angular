@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+<br><br><br>
+<div class="container bootdey">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="assets/ale300.jpg" alt="..." />
+            </div>
+
+            <div class="col-md-4">
+                <h2>{{ offre.offreName }}</h2>
+                <br><br>
+                <div class="m-bot15"> <strong>Price : </strong> <span class="pro-price"> {{offre.service[0].equipement[0].caracteristique[0].prix}} DH</span></div>
+                <br>
+                <div class="form-group">
+                    <label>Quantity</label>
+                    <input type="quantiy" placeholder="1" class="form-control quantity">
+                </div>
+                <p>
+                    <button class="btn btn-round btn-danger" type="button"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+                </p>
+            </div>
+
+            <div class="col-md-4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique est quis elit elementum, vel mattis justo sollicitudin. In pharetra nisl eu pretium faucibus. Mauris at aliquet ante. Aenean facilisis volutpat magna, sed fermentum
+                    null Phasellus sem enim, interdum at elementum eget, tempor ut velit. Vestibulum nisi tellus, sagittis sit amet rutrum a, dignissim ut est. Etiam eget volutpat odio, sit amet maximus
+                </p>
+                <h5>Marque</h5>
+                <p>{{offre.service[0].equipement[0].caracteristique[0].marque}}
+                </p>
+                <h5>Nombre de port :</h5>
+                <p>
+                    {{offre.service[0].equipement[0].caracteristique[0].nbrPort}}
+                </p>
+                <h5>Appels simultane :</h5>
+                <p>
+                    {{offre.service[0].equipement[0].caracteristique[0].aplSim}}
+                </p>
+                <h5>Acces :</h5>
+                <p>
+                    {{offre.service[0].equipement[0].caracteristique[0].acces}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

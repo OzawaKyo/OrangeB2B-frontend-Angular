@@ -60,3 +60,7 @@
 .dropdown:hover .dropbtn {
     background-color: #ff6600;
 }
+
+button {
+    border: none;
+}

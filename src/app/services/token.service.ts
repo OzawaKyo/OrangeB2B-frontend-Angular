@@ -25,13 +25,11 @@ export class TokenService {
   }
 
   decode(payload : any) {
-    console.log('payload : ', payload);
     return JSON.parse(atob(payload));
   }
 
   payload(jwt: any) {
     const payload = jwt.split('.')[1];
-    console.log('payload : ', payload);
     return this.decode(payload);
   }
 
