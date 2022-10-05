@@ -46,7 +46,7 @@ export class CreateComponent implements OnInit {
 
   create(){
     this.offreService.createC(this.catalogues).subscribe(res => console.log("created"))
-    this.router.navigateByUrl("/orangeb2b/voip")
+    this.router.navigateByUrl(`/orangeb2b/${this.catalogues.categorie.toLowerCase( )}`)
   }
 
 }

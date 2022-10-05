@@ -1,51 +1,54 @@
-<app-navbar></app-navbar>
-<div class="row">
-    <div class="col-md-4 col-sm-6">
-        <h1 class="alignn"> Les options DATA :</h1>
+<app-navbar>
+</app-navbar>
+<div class="">
 
-        <button class="btn2" routerLink="/orangeb2b/create">Ajouter une option</button>
-    </div>
-    <div class="col-md-4 col-sm-0">
-
-    </div>
-
-    <div class="col-md-4 align-self-end ">
-        <br><br><br><br><br><br><br>
-        <div class="input-group">
-            <input type="search" class="form-control rounded col-md-5" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-            <button type="button" class="btn btn-outline-primary btn3">search</button>
+</div>
+<div class=" table-section">
+    <div class="voip">
+        <h1 class="title text-center d-flex justify-content-start"> Les options Data :
+        </h1>
+        <div class="container">
+            <div class=" action row">
+                <div class="col-6 order-2">
+                    <div class="d-flex justify-content-end input-group">
+                        <input type="search" class="form-control rounded col-md-5" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                        <button type="button" class="btn ">search</button>
+                    </div>
+                </div>
+                <div class="col-6 order-1">
+                    <button class="btn" routerLink="/orangeb2b/create">Ajouter une option</button>
+                </div>
+            </div>
         </div>
     </div>
 
 
-</div>
+    <div class="table-section container">
 
-<br><br><br>
+        <table align="center" class="table">
+            <thead>
+                <tr>
+                    <th style="border-top-left-radius: 10px; " scope="col ">Id</th>
+                    <th scope="col text-center">Offre</th>
+                    <th scope="col text-center">Service</th>
+                    <th scope="col text-center">Equipement</th>
 
-<div class="row">
-
-    <table align="center" class="table">
-        <thead>
-            <tr>
-                <th style="border-top-left-radius: 10px; " scope="col ">Option</th>
-                <th scope="col ">Service</th>
-                <th scope="col ">Equipement</th>
-                <th scope="col ">Stock</th>
-                <th style="border-top-right-radius: 10px; " scope="col "></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let options of catalogue[0].offre; index as i ">
-                <ng-container *ngFor="let services of options.service ">
-                    <ng-container *ngFor="let equipements of services.equipement ">
-                        <td>{{ options.offreName}}</td>
-                        <td>{{ services.typeService }}</td>
-                        <td>{{ equipements.typeEquipement}}</td>
-                        <td>{{ options.id}}</td>
-                        <td> <button (click)="getId(options.id) " class=" btn btn4 ">Consulter</button></td>
+                    <th style="border-top-right-radius: 10px; " scope="col ">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let options of catalogue[0].offre; index as i ">
+                    <ng-container *ngFor="let services of options.service ">
+                        <ng-container *ngFor="let equipements of services.equipement ">
+                            <td class="text-center">{{ options.id}}</td>
+                            <td class="text-center">{{ options.offreName}}</td>
+                            <td class="text-center">{{ services.typeService }}</td>
+                            <td class="text-center">{{ equipements.typeEquipement}}</td>
+                            <td class="text-center"> <button (click)="getId(options.id) " class=" btn btn4 ">Consulter</button></td>
+                        </ng-container>
                     </ng-container>
-                </ng-container>
-            </tr>
-        </tbody>
-    </table>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
