@@ -153,6 +153,18 @@
         font-size: large;
     }
 
+    @media (max-width: 767px) {
+        .btn {
+            line-height: 50px;
+            padding: 0 35px;
+            cursor: pointer;
+            border: #ff6600 1px solid;
+            color: #ff6600;
+            font-weight: bold;
+            font-size: large;
+        }
+    }
+
     .btn:hover {
         border: #ff6600 1px solid;
         color: white;
@@ -256,16 +268,44 @@
         }
     }
 
-    .bb {
+    .next {
         margin-top: 0em;
         margin-left: 16em;
         margin-bottom: -2em;
     }
 
     @media (max-width: 767px) {
-        .bb {
+        .next {
             margin-top: 0em;
             margin-left: 6em;
             margin-bottom: -2em;
+        }
+    }
+
+    .enregistrer {
+        margin-top: 0em;
+        margin-left: 35em;
+        margin-bottom: -2em;
+    }
+
+    @media (max-width: 767px) {
+        .enregistrer {
+            margin-top: 0em;
+            margin-left: 12em;
+            margin-bottom: -2em;
+        }
+    }
+
+    .previous {
+        margin-top: 0em;
+        margin-left: -4em;
+        margin-bottom: -3.5em;
+    }
+
+    @media (max-width: 767px) {
+        .previous {
+            margin-top: 0em;
+            margin-left: -2em;
+            margin-bottom: -3.8em;
         }
     }

@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<br><br><br>
+<!-- <br><br><br>
 <div class="container bootdey">
     <div class="container">
         <div class="row">
@@ -43,4 +43,92 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+<main class="mt-5 pt-4">
+    <div class="container dark-grey-text mt-5">
+
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+
+            <!--Grid column-->
+            <div class="col-md-6 mb-4">
+
+                <img src="assets/ale300.jpg" alt="..." />
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-6 mb-4">
+
+                <!--Content-->
+                <div class="p-4">
+                    <h2>{{ offre.offreName }}</h2>
+                    <br><br>
+                    <div class="m-bot15"> <strong>Price : </strong> <span class="pro-price"> {{offre.service[0].equipement[0].caracteristique[0].prix}} DH</span></div>
+                    <br>
+                    <div class="form-group">
+                        <label>Quantity</label>
+                        <input type="quantiy" placeholder="1" class="form-control quantity">
+                    </div>
+                    <p>
+                        <button class="btn btn-round  bb" type="button"><i class="fa fa-shopping-cart "></i> Add to Cart</button>
+                    </p>
+
+
+                </div>
+                <!--Content-->
+
+            </div>
+            <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+        <hr>
+
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center wow fadeIn">
+
+
+        </div>
+        <!--Grid row-->
+
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+
+            <div class=" row ">
+                <h5>Description</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique est quis elit elementum, vel mattis justo sollicitudin. In pharetra nisl eu pretium faucibus. Mauris at aliquet ante. Aenean facilisis volutpat magna, sed fermentum
+                    null Phasellus sem enim, interdum at elementum eget, tempor ut velit. Vestibulum nisi tellus, sagittis sit amet rutrum a, dignissim ut est. Etiam eget volutpat odio, sit amet maximus
+                </p>
+                <div class="col-md-6">
+                    <h5>Marque</h5>
+                    <p>{{offre.service[0].equipement[0].caracteristique[0].marque}}
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Nombre de port :</h5>
+                    <p>
+                        {{offre.service[0].equipement[0].caracteristique[0].nbrPort}}
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Appels simultane :</h5>
+                    <p>
+                        {{offre.service[0].equipement[0].caracteristique[0].aplSim}}
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Acces :</h5>
+                    <p>
+                        {{offre.service[0].equipement[0].caracteristique[0].acces}}
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!--Grid row-->
+
+    </div>
+</main>
