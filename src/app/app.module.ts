@@ -15,6 +15,8 @@ import { JwtInterceptor } from './services/jwt.interceptor';
 import { ConsulterComponent } from './consulter/consulter.component';
 import { CreateComponent } from './create/create.component';
 import { DataComponent } from './data/data.component';
+import { WifiComponent } from './wifi/wifi.component';
+import { SwitchComponent } from './switch/switch.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { DataComponent } from './data/data.component';
     PageNotFoundComponent,
     ConsulterComponent,
     CreateComponent,
-    DataComponent
+    DataComponent,
+    WifiComponent,
+    SwitchComponent
   ],
   imports: [
     BrowserModule,

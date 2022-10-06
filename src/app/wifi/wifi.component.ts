@@ -8,23 +8,28 @@ import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 
 
+export class Catalogues{
+  constructor(public catalogue: Array<Catalogue>){
+
+  }}
 
 @Component({
-  selector: 'app-voip',
-  templateUrl: './voip.component.html',
-  styleUrls: ['./voip.component.css']
+  selector: 'app-wifi',
+  templateUrl: './wifi.component.html',
+  styleUrls: ['./wifi.component.css']
 })
+export class WifiComponent implements OnInit {
 
-export class VoipComponent implements OnInit {
 
   catalogues:Catalogue[]=[];
   catalogue: any
   id:string=''
 
-
   constructor(private offreService:OffreService,private httpClient:HttpClient,private router:Router){
-    this.offreService.getAllVoip()
+    this.offreService.getAllWifi()
      .subscribe(res=>{ this.catalogue = res;
+      console.log(res);
+
                 this.catalogues=this.catalogue;})
    }
 
@@ -37,8 +42,6 @@ export class VoipComponent implements OnInit {
 
     this.router.navigateByUrl(`orangeb2b/consulter/${i}`)
   }
-
-
 
 
 

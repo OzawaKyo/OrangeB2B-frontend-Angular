@@ -5,7 +5,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-        <div *ngIf="loggedIn" class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item active">
                     <a class="nav-link" routerLink="/orangeb2b">Acceuil <span class="sr-only">(current)</span></a>
@@ -17,11 +17,11 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" routerLink="/orangeb2b/voip">Voip</a>
                         <a class="dropdown-item" routerLink="/orangeb2b/data">Data</a>
-                        <a class="dropdown-item">wifi</a>
-                        <a class="dropdown-item" href="#">switch</a>
+                        <a class="dropdown-item" routerLink="/orangeb2b/wifi">wifi</a>
+                        <a class="dropdown-item" routerLink="/orangeb2b/switch_wifi_tel">switch</a>
                     </div>
                 </li>
-                <li class="nav-item">
+                <li *ngIf="loggedIn" class="nav-item">
                     <a (click)="logout()" class="nav-link" href="#">Déconnexion</a>
                 </li>
             </ul>

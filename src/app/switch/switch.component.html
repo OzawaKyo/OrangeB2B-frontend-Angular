@@ -1,11 +1,10 @@
-<app-navbar>
-</app-navbar>
+<app-navbar></app-navbar>
 <div class="">
 
 </div>
 <div class=" table-section">
     <div class="voip">
-        <h1 class="title text-center d-flex justify-content-start"> Les options Data :
+        <h1 class="title text-center d-flex justify-content-start"> Les offres Switch :
         </h1>
         <div class="container">
             <div class=" action row">
@@ -16,7 +15,7 @@
                     </div>
                 </div>
                 <div class="col-6 order-1">
-                    <button class="btn" routerLink="/orangeb2b/create">Ajouter une option</button>
+                    <button class="btn" routerLink="/orangeb2b/create">Ajouter une offre</button>
                 </div>
             </div>
         </div>
@@ -37,14 +36,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let options of catalogue[0].offre; index as i ">
-                    <ng-container *ngFor="let services of options.service ">
+                <tr *ngFor="let offres of catalogues[0].offre; index as i ">
+                    <ng-container *ngFor="let services of offres.service ">
                         <ng-container *ngFor="let equipements of services.equipement ">
-                            <td class="text-center">{{ options.id}}</td>
-                            <td class="text-center">{{ options.offreName}}</td>
+                            <td class="text-center">{{ offres.id}}</td>
+                            <td class="text-center">{{ offres.offreName}}</td>
                             <td class="text-center">{{ services.typeService }}</td>
                             <td class="text-center">{{ equipements.typeEquipement}}</td>
-                            <td class="text-center"> <button (click)="getId(options.id) " class=" btn btn4 ">Consulter</button></td>
+                            <td class="text-center"> <button (click)="getId(offres.id) " class=" btn btn4 ">Consulter</button></td>
                         </ng-container>
                     </ng-container>
                 </tr>
