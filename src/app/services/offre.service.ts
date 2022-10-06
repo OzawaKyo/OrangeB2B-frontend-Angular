@@ -15,7 +15,12 @@ export class OffreService {
   getAllData(){
     return this.http.get(`${environment.apiUrl}/OrangeB2B/api/catalogue/data/get`)
    }
-
+  getAllWifi(){
+    return this.http.get(`${environment.apiUrl}/OrangeB2B/api/catalogue/wifi/get`)
+  }
+  getAllSwitch(){
+    return this.http.get(`${environment.apiUrl}/OrangeB2B/api/catalogue/switch/get`)
+  }
   createC(catalogue:any){
     return this.http.post(`${environment.apiUrl}/OrangeB2B/api/catalogue/create`,catalogue);
   }

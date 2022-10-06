@@ -10,37 +10,32 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-voip',
-  templateUrl: './voip.component.html',
-  styleUrls: ['./voip.component.css']
+  selector: 'app-switch',
+  templateUrl: './switch.component.html',
+  styleUrls: ['./switch.component.css']
 })
-
-export class VoipComponent implements OnInit {
+export class SwitchComponent implements OnInit {
 
   catalogues:Catalogue[]=[];
   catalogue: any
   id:string=''
 
-
-  constructor(private offreService:OffreService,private httpClient:HttpClient,private router:Router){
-    this.offreService.getAllVoip()
-     .subscribe(res=>{ this.catalogue = res;
-                this.catalogues=this.catalogue;})
+  constructor(private offreService:OffreService,private httpClient:HttpClient,private router:Router) {
+    this.offreService.getAllSwitch()
+    .subscribe(res=>{ this.catalogue = res;
+               this.catalogues=this.catalogue;})
    }
 
   ngOnInit(): void {
-
-
   }
+
+
+
+
 
   getId(i:any){
 
     this.router.navigateByUrl(`orangeb2b/consulter/${i}`)
   }
-
-
-
-
-
 
 }

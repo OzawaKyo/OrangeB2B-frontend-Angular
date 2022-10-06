@@ -1,20 +1,271 @@
-.btn {
-    color: white;
-    background-color: black;
-}
+    /* ==========================================================================
+   #FONT
+   ========================================================================== */
 
-.btn:hover {
-    background-color: #ff6600;
-    color: white;
-}
+    .font-robo {
+        font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+    }
 
-select:hover {
-    background-color: #ff6600;
-    color: black;
-    border: none;
-}
+    .font-poppins {
+        font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+    }
 
-option {
-    background-color: white;
-    color: black;
-}
+    .font-opensans {
+        font-family: "Open Sans", "Arial", "Helvetica Neue", sans-serif;
+    }
+    /* ==========================================================================
+     #GRID
+     ========================================================================== */
+
+    .form-row {
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .form-row .name {
+        width: 125px;
+        color: #555;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    .form-row .value {
+        width: -webkit-calc(100% - 125px);
+        width: -moz-calc(100% - 125px);
+        width: calc(100% - 125px);
+    }
+
+    */
+    /* ==========================================================================
+     #BOX-SIZING
+     ========================================================================== */
+    /**
+   * More sensible default box-sizing:
+   * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+   */
+
+    html {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    *,
+    *:before,
+    *:after {
+        -webkit-box-sizing: inherit;
+        -moz-box-sizing: inherit;
+        box-sizing: inherit;
+    }
+    /* ==========================================================================
+     #PAGE WRAPPER
+     ========================================================================== */
+
+    .page-wrapper {
+        min-height: 100vh;
+    }
+
+    body {
+        font-family: "Open Sans", "Arial", "Helvetica Neue", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 400;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 15px;
+    }
+
+    h6 {
+        font-size: 13px;
+    }
+    /* ==========================================================================
+     #WRAPPER
+     ========================================================================== */
+
+    .wrapper {
+        margin: 0 auto;
+    }
+
+    .wrapper--w960 {
+        max-width: 960px;
+    }
+
+    .wrapper--w790 {
+        max-width: 790px;
+    }
+
+    .wrapper--w780 {
+        max-width: 780px;
+    }
+
+    .wrapper--w680 {
+        max-width: 680px;
+    }
+    /* ==========================================================================
+     #BUTTON
+     ========================================================================== */
+
+    .btn {
+        line-height: 50px;
+        padding: 0 50px;
+        cursor: pointer;
+        border: #ff6600 1px solid;
+        color: #ff6600;
+        font-weight: bold;
+        font-size: large;
+    }
+
+    .btn:hover {
+        border: #ff6600 1px solid;
+        color: white;
+        background-color: #ff6600;
+    }
+    /* ==========================================================================
+     #FORM
+     ========================================================================== */
+
+    input,
+    select {
+        outline: none;
+        margin: 0;
+        border: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        width: 100%;
+        font-size: 14px;
+        font-family: inherit;
+    }
+
+    .input--style-5,
+    select {
+        background: #e5e5e5;
+        line-height: 50px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        padding: 0 22px;
+        font-size: 16px;
+        color: #555;
+    }
+
+    select {
+        padding: 0px !important;
+    }
+
+    .input-group-desc,
+    input {
+        position: relative;
+    }
+
+    .input-group,
+    input {
+        position: relative;
+        margin: 0;
+    }
+    /* ==========================================================================
+     #TITLE
+     ========================================================================== */
+
+    .title {
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+        color: #fff;
+    }
+    /* ==========================================================================
+     #CARD
+     ========================================================================== */
+
+    .card {
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        background: #fff;
+    }
+
+    .card-5 {
+        background: #fff;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-5 .card-heading {
+        padding: 20px 0;
+        background: #ff6600;
+        -webkit-border-top-left-radius: 10px;
+        -moz-border-radius-topleft: 10px;
+        border-top-left-radius: 10px;
+        -webkit-border-top-right-radius: 10px;
+        -moz-border-radius-topright: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .card-5 .card-body {
+        padding: 52px 85px;
+        padding-bottom: 73px;
+    }
+
+    @media (max-width: 767px) {
+        .card-5 .card-body {
+            padding: 40px 30px;
+            padding-bottom: 50px;
+        }
+    }
+
+    .bb {
+        margin-top: 0em;
+        margin-left: 16em;
+        margin-bottom: -2em;
+    }
+
+    @media (max-width: 767px) {
+        .bb {
+            margin-top: 0em;
+            margin-left: 6em;
+            margin-bottom: -2em;
+        }
+    }
