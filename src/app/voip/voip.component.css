@@ -12,6 +12,14 @@
         }
     }
 
+    @media (min-width: 900px) {
+        .title {
+            margin-top: 1em;
+            margin-left: 8em;
+            color: #ff6600;
+        }
+    }
+
     .voip {
         margin: 0%;
         padding: 0%;

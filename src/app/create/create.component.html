@@ -81,90 +81,101 @@
                 </div>
                 <div class="card-body ">
                     <form method="POST">
-                        <div class="form-row">
-                            <div class="name">Categorie</div>
-                            <div class="form-group col-md-3">
-                                <br>
-                                <select align="center" [(ngModel)]="catalogues.categorie" name="categorie" name="subject" [(ngModel)]="catalogues.categorie" name="categorie" id="inputState" class="form-control">
-                        <option align="center" selected>VOIP</option>
-                        <option align="center" >DATA</option>
-                        <option align="center" >WIFI</option>
-                        <option align="center" >SWITCH_WIFI_TEL</option>
+
+                        <div class="col-10 ">
+                            <div *ngIf="step == 1">
+                                <div class="form-row">
+                                    <div class="name">Categorie</div>
+                                    <div class="form-group col-md-3">
+                                        <br>
+                                        <select align="center" [(ngModel)]="catalogues.categorie" name="categorie" name="subject" [(ngModel)]="catalogues.categorie" name="categorie" id="inputState" class="form-control">
+                      <option align="center" selected>VOIP</option>
+                      <option align="center">DATA</option>
+                      <option align="center">WIFI</option>
+                      <option align="center">SWITCH_WIFI_TEL</option>
                     </select>
-                            </div>
-                        </div>
-                        <div class="col-10  ">
-                            <div class="form-row ">
-                                <div class="name">Nom de l'Offre/Option :</div>
-                                <div class="value">
-                                    <div class="input-group">
-                                        <input [(ngModel)]="catalogues.offre[0].offreName" name="offreName" class="input--style-5" type="text" name="company">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="name">Type de service :</div>
-                                <div class="value">
-                                    <div class="input-group">
-                                        <input [(ngModel)]="catalogues.offre[0].service[0].typeService" class="input--style-5" type="text" name="company">
+                                <div class="form-row ">
+                                    <div class="name">Nom de l'Offre/Option :</div>
+                                    <div class="value">
+                                        <div class="input-group">
+                                            <input [(ngModel)]="catalogues.offre[0].offreName" name="offreName" class="input--style-5" type="text">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="name">Type d'equipement :</div>
-                                <div class="value">
-                                    <div class="input-group">
-                                        <input [(ngModel)]="catalogues.offre[0].service[0].equipement[0].typeEquipement" name="typeEquipement" class="input--style-5" type="email" name="email">
+                                <div class="form-row">
+                                    <div class="name">Type de service :</div>
+                                    <div class="value">
+                                        <div class="input-group">
+                                            <input [(ngModel)]="catalogues.offre[0].service[0].typeService" name="typeService" class="input--style-5" type="text">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="form-row col-8 ">
-                                <div class="name">Marque :</div>
-                                <div class="value">
-                                    <div class="input-group">
-                                        <input [(ngModel)]="catalogues.offre[0].service[0].equipement[0].caracteristique[0].marque" name="marque" class="input--style-5" type="text" name="company">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row col-8">
-                                <div class="name">Nombres de ports :</div>
-                                <div class="value">
-                                    <div class="input-group">
-                                        <input [(ngModel)]="catalogues.offre[0].service[0].equipement[0].caracteristique[0].nbrPort" name="nbrPort" class="input--style-5" type="text" name="company">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row col-8">
-                                <div class="name">Appels Simultane :</div>
-                                <div class="value">
-                                    <div class="input-group">
-                                        <input [(ngModel)]="catalogues.offre[0].service[0].equipement[0].caracteristique[0].aplSim" name="aplSim" class="input--style-5" type="email" name="email">
+                                <div class="form-row">
+                                    <div class="name">Type d'equipement :</div>
+                                    <div class="value">
+                                        <div class="input-group">
+                                            <input [(ngModel)]="catalogues.offre[0].service[0].equipement[0].typeEquipement" name="typeEquipement" class="input--style-5" type="text">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
+                            <div *ngIf="step == 2">
+                                <div class="form-row col-8 ">
+                                    <div class="name">Marque :</div>
+                                    <div class="value">
+                                        <div class="input-group">
+                                            <input [(ngModel)]="catalogues.offre[0].service[0].equipement[0].caracteristique[0].marque" name="marque" class="input--style-5" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row col-8">
+                                    <div class="name">Nombres de ports :</div>
+                                    <div class="value">
+                                        <div class="input-group">
+                                            <input [(ngModel)]="catalogues.offre[0].service[0].equipement[0].caracteristique[0].nbrPort" name="nbrPort" class="input--style-5" type="text" name="company">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row col-8">
+                                    <div class="name">Appels Simultane :</div>
+                                    <div class="value">
+                                        <div class="input-group">
+                                            <input [(ngModel)]="catalogues.offre[0].service[0].equipement[0].caracteristique[0].aplSim" name="aplSim" class="input--style-5" type="text">
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <div class="form-row col-8">
-                                <div class="name"> Acces :</div>
-                                <div class="value">
-                                    <div class="input-group">
-                                        <input [(ngModel)]="catalogues.offre[0].service[0].equipement[0].caracteristique[0].acces" name="acces" class="input--style-5" type="email" name="email">
+
+                                <div class="form-row col-8">
+                                    <div class="name"> Acces :</div>
+                                    <div class="value">
+                                        <div class="input-group">
+                                            <input [(ngModel)]="catalogues.offre[0].service[0].equipement[0].caracteristique[0].acces" name="acces" class="input--style-5" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row col-8">
+                                    <div class="name">Prix :</div>
+                                    <div class="value">
+                                        <div class="input-group">
+                                            <input [(ngModel)]="catalogues.offre[0].service[0].equipement[0].caracteristique[0].prix" name="prix" class="input--style-5" type="text">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-row col-8">
-                                <div class="name">Prix :</div>
-                                <div class="value">
-                                    <div class="input-group">
-                                        <input [(ngModel)]="catalogues.offre[0].service[0].equipement[0].caracteristique[0].prix" name="prix" class="input--style-5" type="email" name="email">
-                                    </div>
-                                </div>
+                            <div *ngIf="step == 2" class="previous">
+                                <button (click)="previous()" class="btn" type="submit">Previous</button>
                             </div>
 
+                            <div *ngIf="step == 1" class="next">
+                                <button (click)="next()" class="btn" type="submit">Next</button>
+                            </div>
 
-                            <div class="bb">
-                                <button (click)="create()" class="btn" type="submit">Resister</button>
+                            <div *ngIf="step == 2" class="enregistrer">
+                                <button (click)="create()" class="btn" type="submit">Enregistrer</button>
                             </div>
                         </div>
                     </form>

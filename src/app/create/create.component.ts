@@ -12,20 +12,20 @@ import { OffreService } from '../services/offre.service';
 export class CreateComponent implements OnInit {
 
 
-  catalogues ={
-    categorie:'',
-    offre :[{
-      offreName:'',
-      service:[{
-        typeService:'',
-        equipement:[{
-          typeEquipement:'',
-          caracteristique:[{
+  catalogues = {
+    categorie: '',
+    offre: [{
+      offreName: '',
+      service: [{
+        typeService: '',
+        equipement: [{
+          typeEquipement: '',
+          caracteristique: [{
             marque: '',
-                  nbrPort:'' ,
-                  aplSim: '',
-                  acces: '',
-                  prix: ''
+            nbrPort: '',
+            aplSim: '',
+            acces: '',
+            prix: ''
 
           }]
         }]
@@ -33,20 +33,34 @@ export class CreateComponent implements OnInit {
     }]
   }
 
-  constructor(private httpClient:HttpClient,private offreService:OffreService,private router:Router) {
+  step: any = 1
+  constructor(private httpClient: HttpClient, private offreService: OffreService, private router: Router) {
+    console.log(this.step);
 
 
 
-   }
+  }
 
 
 
   ngOnInit(): void {
   }
 
-  create(){
+  create() {
     this.offreService.createC(this.catalogues).subscribe(res => console.log("created"))
-    this.router.navigateByUrl(`/orangeb2b/${this.catalogues.categorie.toLowerCase( )}`)
+    this.router.navigateByUrl(`/orangeb2b/${this.catalogues.categorie.toLowerCase()}`)
   }
 
+  next() {
+    if (this.catalogues.categorie != '' && this.catalogues.offre[0].offreName != '' && this.catalogues.offre[0].service[0].typeService != '' && this.catalogues.offre[0].service[0].equipement[0].typeEquipement != '') {
+      this.step = this.step + 1
+    }
+    console.log(this.step);
+    console.log(this.catalogues);
+
+  }
+  previous() {
+    this.step = this.step - 1
+    console.log(this.step);
+  }
 }
