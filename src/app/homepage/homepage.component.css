@@ -1,0 +1,23 @@
+.container {
+    border: #ff6600;
+}
+
+.border {
+    margin-left: 2em;
+}
+
+img {
+    width: 10em;
+}
+
+.offres {
+    margin-top: 2em;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+b {
+    color: #ff6600;
+}
