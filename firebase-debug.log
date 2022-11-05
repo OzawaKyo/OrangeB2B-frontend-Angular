@@ -1,0 +1,21 @@
+[debug] [2022-11-05T18:02:31.851Z] ----------------------------------------------------------------------
+[debug] [2022-11-05T18:02:31.853Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\OzawaKyo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-11-05T18:02:31.853Z] CLI Version:   11.16.0
+[debug] [2022-11-05T18:02:31.854Z] Platform:      win32
+[debug] [2022-11-05T18:02:31.854Z] Node Version:  v16.17.0
+[debug] [2022-11-05T18:02:31.855Z] Time:          Sat Nov 05 2022 19:02:31 GMT+0100 (UTC+02:00)
+[debug] [2022-11-05T18:02:31.855Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-05T18:02:31.864Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-05T18:02:31.865Z] > authorizing via signed-in user (androidman392@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\OzawaKyo\angular\OrangeB2B-angular
+
